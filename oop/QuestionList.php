@@ -22,6 +22,22 @@ class QuestionList
     }
 
     /**
+     * @return array|mixed
+     */
+    public static function getListQuestion(): mixed
+    {
+        return self::$listQuestion;
+    }
+
+    /**
+     * @param array|mixed $listQuestion
+     */
+    public static function setListQuestion(mixed $listQuestion): void
+    {
+        self::$listQuestion = $listQuestion;
+    }
+
+    /**
      * @param $path
      * @return QuestionList
      */
@@ -40,8 +56,6 @@ class QuestionList
             } catch (Throwable $th) {
                 [$stt, $title, $content] = explode('.', $question);
             }
-            echo "<pre>";
-            var_dump($content);
             self::$listQuestion[] = new Question($stt, trim($title), trim($content), str_replace('---', '', $answer));
         }
         return new static(self::$listQuestion);

@@ -6,24 +6,12 @@ use JsonSerializable;
 
 class Question implements JsonSerializable
 {
-    /**
-     * @var $number
-     */
     private $number;
 
-    /**
-     * @var $title
-     */
     private $title;
 
-    /**
-     * @var $content
-     */
     private $content;
 
-    /**
-     * @var $answer
-     */
     private $answer;
 
     /**
@@ -59,7 +47,7 @@ class Question implements JsonSerializable
     /**
      * @return mixed
      */
-    public function getTitle()
+    public function getTitle(): mixed
     {
         return $this->title;
     }
@@ -75,7 +63,7 @@ class Question implements JsonSerializable
     /**
      * @return mixed
      */
-    public function getContent()
+    public function getContent(): mixed
     {
         return $this->content;
     }
@@ -91,7 +79,7 @@ class Question implements JsonSerializable
     /**
      * @return mixed
      */
-    public function getAnswer()
+    public function getAnswer(): mixed
     {
         return $this->answer;
     }
@@ -107,7 +95,7 @@ class Question implements JsonSerializable
     /**
      * @return array
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return [
             'number' => $this->number,
