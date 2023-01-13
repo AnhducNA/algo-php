@@ -1,0 +1,16 @@
+{
+    "name": "algo_php/oop",
+    "autoload": {
+        "psr-4": {
+            "AlgoPhp\\Oop\\": "oop/"
+        }
+    },
+    "authors": [
+        {
+            "name": "anhduc"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
+    }
+}
